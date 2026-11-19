@@ -1,0 +1,23 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'ir.yousefzadeh.prospect7'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'ir.yousefzadeh.prospect7'
+        minSdk 21            // Android 5.0 and newer
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug   // installable APK without a private keystore
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+dependencies { implementation 'androidx.webkit:webkit:1.11.0' }
